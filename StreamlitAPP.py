@@ -59,17 +59,21 @@ with st.form("user_inputs"):
 
                 if isinstance(response,dict):
                     quiz = response.get("quiz",None)
+                    #print(quiz)
 
                     if quiz is not None:
+                        
                         table_data= get_table_data(quiz)
+                        print(table_data)
                         if table_data is not None:
-                            df = pd.DataFrame(table_data)
-                            df.index = df.index+1
-                            st.table(df)
+                           df = pd.DataFrame(table_data)
+                             
+                           df.index = df.index+1
+                           st.table(df)
 
-                            st.text_area(label = "Review", value = response["review"])
+                           st.text_area(label = "Review", value = response["review"])
                         else:
-                            st.error("Error in the table")
+                          st.error("Error in the table")
 
                     else:
                         st.write(response)
@@ -81,4 +85,4 @@ with st.form("user_inputs"):
 
 
 
-
+                        

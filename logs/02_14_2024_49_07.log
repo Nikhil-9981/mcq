@@ -1,0 +1,11 @@
+[2024-02-14 02:49:40,731] 1027 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2024-02-14 02:49:41,478] 1027 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+[2024-02-14 02:49:41,478] 1007 openai._base_client - INFO - Retrying request to /chat/completions in 0.841575 seconds
+[2024-02-14 02:49:43,129] 1027 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+[2024-02-14 02:49:43,129] 1007 openai._base_client - INFO - Retrying request to /chat/completions in 1.943363 seconds
+[2024-02-14 02:49:45,428] 1027 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2024-02-14 02:49:58,727] 1027 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+[2024-02-14 02:49:58,727] 1007 openai._base_client - INFO - Retrying request to /chat/completions in 0.758359 seconds
+[2024-02-14 02:49:59,841] 1027 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2024-02-14 02:49:59,841] 1007 openai._base_client - INFO - Retrying request to /chat/completions in 20.000000 seconds
+[2024-02-14 02:50:20,942] 1027 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
