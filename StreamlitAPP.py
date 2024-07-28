@@ -7,7 +7,7 @@ from src.mcqgenerator.utils import read_file,get_table_data
 from src.mcqgenerator.logger import logging
 import streamlit as st
  
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks.manager import get_openai_callback
 
 from src.mcqgenerator.MCQGenerator import generate_evaluate_chain
 
@@ -64,25 +64,15 @@ with st.form("user_inputs"):
                     if quiz is not None:
                         
                         table_data= get_table_data(quiz)
-                        print(table_data)
+                        print("Table Data:", table_data)  # Add this line to print table_data
                         if table_data is not None:
-                           df = pd.DataFrame(table_data)
-                             
-                           df.index = df.index+1
-                           st.table(df)
-
-                           st.text_area(label = "Review", value = response["review"])
+                            df = pd.DataFrame(table_data)
+                            print("DataFrame:")
+                            print(df)  # Add this line to print the DataFrame
+                            df.index = df.index+1
+                            st.table(df)
+                            st.text_area(label = "Review", value = response["review"])
                         else:
-                          st.error("Error in the table")
-
-                    else:
-                        st.write(response)
-
-
-
-
-
-
-
-
+                            st.error("Error in the table")
+                            
                         

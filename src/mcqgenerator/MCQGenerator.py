@@ -6,19 +6,23 @@ from dotenv import load_dotenv
 from src.mcqgenerator.utils import read_file,get_table_data
 from src.mcqgenerator.logger import logging
 
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+
 from langchain.chains import SequentialChain
 
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks.manager import get_openai_callback
 
 
 
 load_dotenv()
+# Load model directly
 
-key = os.getenv("OPENAI_API_KEY")
-
+ 
+ 
+key = "sk-None-NmncpqVrAwoqNg5igdsVT3BlbkFJWC0A4yDKhWAPmz93TbM7"
+print(key)
 llm = ChatOpenAI(openai_api_key = key,model_name= "gpt-3.5-turbo", temperature = 0.5)
 
 template = """

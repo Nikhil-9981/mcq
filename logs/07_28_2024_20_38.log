@@ -1,0 +1,5 @@
+[2024-07-28 17:21:06,452] 1013 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2024-07-28 17:21:06,452] 1073 openai._base_client - INFO - Retrying request to /chat/completions in 0.992364 seconds
+[2024-07-28 17:21:07,871] 1013 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2024-07-28 17:21:07,871] 1073 openai._base_client - INFO - Retrying request to /chat/completions in 1.810179 seconds
+[2024-07-28 17:21:09,999] 1013 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
