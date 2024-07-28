@@ -21,8 +21,8 @@ load_dotenv()
 
  
  
-key = "sk-None-NmncpqVrAwoqNg5igdsVT3BlbkFJWC0A4yDKhWAPmz93TbM7"
-print(key)
+key = os.getenv("OPENAI_API_KEY")
+ 
 llm = ChatOpenAI(openai_api_key = key,model_name= "gpt-3.5-turbo", temperature = 0.5)
 
 template = """
